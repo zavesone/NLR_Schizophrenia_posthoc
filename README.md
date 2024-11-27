@@ -136,8 +136,3 @@ For queries regarding this post-hoc analysis:
 
 *"Understanding variability in biological markers is crucial for advancing personalized medicine approaches in psychiatry."*
 
----
-**Note**: This analysis is part of ongoing research into inflammatory markers in schizophrenia. For the original analysis, see the [original repository](link-to-original-repo).
-```
-
-Now the entire README is in proper markdown format that you can directly paste into a README.md file. All sections are consistently formatted with appropriate headings, code blocks, and list formatting.
