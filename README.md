@@ -9,41 +9,7 @@ This post-hoc analysis investigates the heterogeneity in NLR measurements across
 ## Repository Structure
 ```python
 repository/
-├── analysis/
-│   ├── lnVCR_analysis.py        # Variation coefficient ratio calculations
-│   ├── mean_difference.py       # Standardized mean difference analysis  
-│   └── sensitivity.py           # Leave-one-out sensitivity analysis
-├── data/
-│   └── original_values.py       # Input data and parameters
-├── visualizations/
-│   └── figures/                 # Generated plots and visualizations
-└── results/
-    └── analysis_outputs.csv     # Computed metrics and statistics
-
-
-
-```markdown
-# Post-hoc Analysis of Variation in Neutrophil-to-Lymphocyte Ratio Across Schizophrenia Subtypes
-![mygif](https://s12.gifyu.com/images/SDs0v.gif)
-
-This repository contains additional statistical analyses examining variability patterns in Neutrophil-to-Lymphocyte Ratio (NLR) across different schizophrenia subtypes, extending the findings from our original study [doi: 10.52567/2712-9179-2024-4-3-12-23].
-
-## Project Overview
-This post-hoc analysis investigates the heterogeneity in NLR measurements across schizophrenia subtypes using variation coefficient ratios and standardized mean differences. The analysis aims to provide deeper insights into the patterns of inflammatory marker variability in different manifestations of schizophrenia.
-
-## Repository Structure
-```python
-repository/
-├── analysis/
-│   ├── lnVCR_analysis.py        # Variation coefficient ratio calculations
-│   ├── mean_difference.py       # Standardized mean difference analysis  
-│   └── sensitivity.py           # Leave-one-out sensitivity analysis
-├── data/
-│   └── original_values.py       # Input data and parameters
-├── visualizations/
-│   └── figures/                 # Generated plots and visualizations
-└── results/
-    └── analysis_outputs.csv     # Computed metrics and statistics
+└── posthoc_nlr.ipynb    # Jupyter notebook containing all analyses
 ```
 
 ## Data Structure
@@ -88,19 +54,38 @@ requirements = [
 ]
 ```
 
-## Installation & Usage
-```bash
-# Clone repository
-git clone https://github.com/yourusername/nlr-variation-analysis
 
-# Install requirements
-pip install -r requirements.txt
+# Analysis Results
 
-# Run analyses
-python analysis/lnVCR_analysis.py
-python analysis/mean_difference.py
-python analysis/sensitivity.py
-```
+## lnVCR Analysis
+We performed a logarithm of Variation Coefficient Ratio (lnVCR) analysis across different schizophrenia subtypes:
+- Schizophrenia Unspecified showed the highest variability (lnVCR = 0.2688, p < 0.001)
+- First Episode Schizophrenia (lnVCR = 0.1544, p < 0.001)
+- Schizophrenia in Remission (lnVCR = 0.1799, p < 0.001)
+- Schizophrenia without Remission showed the lowest effect (lnVCR = 0.05, p = 0.0832)
+
+## Model Comparison
+The AIC/BIC analysis strongly favored the observed model over the null model:
+- Observed model showed better fit (AIC = 42.64, BIC = 41.42)
+- Null model performed worse (AIC = 226.86, BIC = 225.44)
+- LogLik values further supported this conclusion
+- Chi-square test confirmed significant difference (p < 0.001)
+
+## Mean Differences Analysis
+Forest plot analysis revealed significant mean differences from control:
+- All groups showed positive mean differences
+- Strongest effect in Schizophrenia Unspecified
+- Significant effects across all subtypes except Schizophrenia without Remission
+- 95% confidence intervals suggest reliable effects
+
+## Sensitivity Analysis
+Leave-one-out analysis revealed:
+- Excluding Schizophrenia without Remission had the largest impact on lnVCR (+0.0377)
+- Mean differences remained robust to group exclusion
+- First Episode Schizophrenia showed consistent effects across analyses
+- Results suggest stability of findings with minor variations based on group inclusion
+
+These findings suggest heterogeneous variability patterns across schizophrenia subtypes, with particularly strong effects in unspecified cases and more stable patterns in first-episode cases.
 
 ## Key Findings
 - Identified significant heterogeneity in NLR variability across subgroups
@@ -113,25 +98,14 @@ python analysis/sensitivity.py
 - Cannot account for individual variations
 - Limited to available subgroup classifications
 
-## Future Directions
-- Extension to other inflammatory markers
-- Integration with clinical outcomes
-- Development of more sophisticated variability metrics
-
-## Contributors
-N.V. Zakharova
-R.F. Nasyrova
-M.N. Rumyantseva
-A.I. Rakhmatullin
-K.I. Sizykh
-F.N. Kostin
-
 ## Contact
 For queries regarding this post-hoc analysis:
 - Open an issue in this repository
 - Email: fedor3016@gmail.com
 
-## Commitment to Open Science
+## Author
+Fedor Kostin
+
 ![mygif](https://s12.gifyu.com/images/SDxHt.gif)
 
 *"Understanding variability in biological markers is crucial for advancing personalized medicine approaches in psychiatry."*
