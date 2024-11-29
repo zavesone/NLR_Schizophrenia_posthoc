@@ -111,8 +111,6 @@ Leave-one-out analysis showed:
 - Cannot account for individual variations
 - Limited to available subgroup classifications
 
-## Author
-Fedor Kostin
 
 ## Contact
 For queries regarding this post-hoc analysis:
