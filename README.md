@@ -1,7 +1,4 @@
 
-```
-
-```
 # Post-hoc Analysis of Variation in Neutrophil-to-Lymphocyte Ratio Across Schizophrenia Subtypes
 ![mygif](https://s12.gifyu.com/images/SDs0v.gif)
 
