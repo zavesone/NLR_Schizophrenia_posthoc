@@ -73,19 +73,16 @@ Analysis of coefficient variation ratios showed:
 All groups except "Without Remission" showed significantly higher variability compared to controls (p<0.001).
 
 ### Mean Differences Across Groups
-![Figure 2]()
-*Forest plot of mean differences from control group*
-
 Model comparison results:
 - Observed model: AIC=98.86, BIC=97.63
 - Null model: AIC=1156.31, BIC=1155.70
 - Statistical significance: p<0.0001
 
 ### Heterogeneity Assessment
-![Figure 3](https://github.com/zavesone/NLR_Schizophrenia_posthoc/blob/main/plots/bubble_plot.png)
+![Figure 2](https://github.com/zavesone/NLR_Schizophrenia_posthoc/blob/main/plots/bubble_plot.png)
 *Effect size vs standard error relationship with sample size representation*
 
-![Figure 4](https://github.com/zavesone/NLR_Schizophrenia_posthoc/blob/main/plots/Heterogeneity%20Statistics.png)
+![Figure 3](https://github.com/zavesone/NLR_Schizophrenia_posthoc/blob/main/plots/Heterogeneity%20Statistics.png)
 *Effect size comparison showing heterogeneity between subgroups*
 
 Heterogeneity statistics revealed substantial differences between subgroups:
@@ -94,7 +91,7 @@ Heterogeneity statistics revealed substantial differences between subgroups:
 - I² value: 91.9%
 
 ### Sensitivity Analysis
-![Figure 5](https://github.com/zavesone/NLR_Schizophrenia_posthoc/blob/main/plots/sensitivity_analyses.png)
+![Figure 4](https://github.com/zavesone/NLR_Schizophrenia_posthoc/blob/main/plots/sensitivity_analyses.png)
 *Impact of excluding individual groups on lnVCR and mean differences*
 
 Leave-one-out analysis showed:
